@@ -1,0 +1,98 @@
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+  <md-toolbar color="primary">
+    <span><h6> MEIOS DIGITAIS</h6> </span>
+    
+    <div>
+      <span fxFlex></span>
+      <button md-button> <h6> Sumário </h6>  </button>
+      <button md-button> <h6> Campanhas </h6> </button>
+    </div>
+    <!-- Filler that pushes the menu button to the end of the toolbar -->
+    <span fxFlex></span>
+    <button md-icon-button [mdMenuTriggerFor]="themeMenu">
+  <md-icon>more_vert</md-icon>
+  </button>
+  </md-toolbar>
+  <md-sidenav-container fxFlex>
+
+    <md-sidenav mode="side" opened>
+      <md-tab-group md-stretch-tabs>
+        <md-tab label="Produtos">
+          <md-nav-list>
+            <md-list-item *ngFor="let user of users" (click)="selectedUser = user">
+              <md-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></md-icon>
+              <span>{{user.name}}</span>
+            </md-list-item>
+          </md-nav-list>
+        </md-tab>
+      </md-tab-group>
+    </md-sidenav>
+
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+
+      <md-card fxFlex="50">
+        <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
+        <h2>{{selectedUser.name}}</h2>
+        <p>{{selectedUser.details}}</p>
+      </md-card>
+
+      <md-card fxFlex="50">
+        <div class="cardchart" fxLayout.sm="column">
+          <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis"
+            [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [roundDomains]="roundDomains"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [autoScale]="autoScale" [curve]="curves['Cardinal']" (select)="onSelect($event)">
+          </ngx-charts-line-chart>
+        </div>
+      </md-card>
+
+      <!-- 
+      <md-card fxFlex fxLayout="column" fxLayoutGap="14px">
+        <md-slide-toggle [(ngModel)]="selectedUser.isAdmin">Is Admin?</md-slide-toggle>
+        <md-slide-toggle [(ngModel)]="selectedUser.isCool">Is Cool?</md-slide-toggle>
+      </md-card>
+
+    </div>
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+      <md-card fxFlex="70">
+        <ngx-charts-line-chart 
+        [view]="view" 
+        [scheme]="colorScheme" 
+        [results]="multi" 
+        [gradient]="gradient" 
+        [xAxis]="showXAxis" 
+        [yAxis]="showYAxis"
+        [legend]="showLegend" 
+        [showXAxisLabel]="showXAxisLabel" 
+        [showYAxisLabel]="showYAxisLabel" 
+        [roundDomains]="roundDomains"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel" 
+        [autoScale]="autoScale" 
+        [curve]="curves['Cardinal']" 
+        (select)="onSelect($event)">
+        </ngx-charts-line-chart>
+      </md-card>
+      <md-card fxFlex fxLayout="column" fxLayoutGap="14px">
+        <ngx-charts-pie-grid
+      [view]="viewcard"
+      [scheme]="colorScheme"
+      [results]="card1"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-grid>
+      </md-card>
+  -->
+    </div>
+  </md-sidenav-container>
+
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+
+  <button md-fab (click)="openAdminDialog()" class="fab-bottom-right">
+    <md-icon>add</md-icon>
+  </button>
+
+
+
+
+</div>
