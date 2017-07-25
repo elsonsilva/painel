@@ -31,7 +31,8 @@
     }
   ],
   "e2e": {
-    "protractor": {}
+    "protractor": {
+    }
   },
   "lint": [
     {
@@ -45,10 +46,12 @@
     }
   ],
   "test": {
-    "karma": {}
+    "karma": {
+    }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }

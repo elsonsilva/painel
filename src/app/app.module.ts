@@ -12,6 +12,10 @@ import {AppComponent} from './app.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import {DialogComponent} from './dialog/dialog.component';
 
+// Import the ButtonsModule
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 import 'hammerjs';
 
 @NgModule({
@@ -26,7 +30,9 @@ import 'hammerjs';
     MaterialModule,
     FlexLayoutModule,
     NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonsModule,
+    ChartsModule
   ],
   providers: [
 

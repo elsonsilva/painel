@@ -1,16 +1,16 @@
-import {Component} from '@angular/core';
-import {MdIconRegistry, MdDialog} from '@angular/material';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component } from '@angular/core';
+import { MdIconRegistry, MdDialog } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import * as shape from 'd3-shape';
 import * as d3 from 'd3';
 
-import {DialogComponent} from './dialog/dialog.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
@@ -98,119 +98,136 @@ export class AppComponent {
   //ngx-charts
   card1: any[] = [
     {
-    name: 'Germany',
-    value: 40632
-  }
+      name: 'Germany',
+      value: 40632
+    }
   ];
 
   card2: any[] = [
     {
-    name: 'United States',
-    value: 49737
-  }
+      name: 'United States',
+      value: 49737
+    }
   ];
 
   card3: any[] = [
     {
-    name: 'France',
-    value: 36745
-  }
+      name: 'France',
+      value: 36745
+    }
   ];
 
-   single: any[] = [
+  single: any[] = [
     {
-    name: 'Germany',
-    value: 40632
-  },
-  {
-    name: 'United States',
-    value: 49737
-  },
-  {
-    name: 'France',
-    value: 36745
-  },
-  {
-    name: 'United Kingdom',
-    value: 36240
-  },
-  {
-    name: 'Spain',
-    value: 33000
-  },
-  {
-    name: 'Italy',
-    value: 35800
-  }
+      name: 'Germany',
+      value: 40632
+    },
+    {
+      name: 'United States',
+      value: 49737
+    },
+    {
+      name: 'France',
+      value: 36745
+    },
+    {
+      name: 'United Kingdom',
+      value: 36240
+    },
+    {
+      name: 'Spain',
+      value: 33000
+    },
+    {
+      name: 'Italy',
+      value: 35800
+    }
   ];
 
   multi: any[] = [
-  {
-    "name": "Germany",
-    "series": [
-      {
-        "name": "2010",
-        "value": 7300000
-      },
-      {
-        "name": "2011",
-        "value": 9940000
-      },
-       {
-        "name": "2012",
-        "value": 7500000
-      },
-      {
-        "name": "2013",
-        "value": 9960000
-      }
-    ]
-  },
+    {
+      "name": "Germany",
+      "series": [
+        {
+          "name": "2010",
+          "value": 7300000
+        },
+        {
+          "name": "2011",
+          "value": 9940000
+        },
+        {
+          "name": "2012",
+          "value": 7500000
+        },
+        {
+          "name": "2013",
+          "value": 9960000
+        }
+      ]
+    },
 
-  {
-    "name": "USA",
-    "series": [
-      {
-        "name": "2010",
-        "value": 5300000
-      },
-      {
-        "name": "2011",
-        "value": 4940000
-      },
-       {
-        "name": "2012",
-        "value": 7500000
-      },
-      {
-        "name": "2013",
-        "value": 7960000
-      }
-    ]
-  },
+    {
+      "name": "USA",
+      "series": [
+        {
+          "name": "2010",
+          "value": 5300000
+        },
+        {
+          "name": "2011",
+          "value": 4940000
+        },
+        {
+          "name": "2012",
+          "value": 7500000
+        },
+        {
+          "name": "2013",
+          "value": 7960000
+        }
+      ]
+    },
 
-  {
-    "name": "France",
-    "series": [
-      {
-        "name": "2010",
-        "value": 3300000
-      },
-      {
-        "name": "2011",
-        "value": 4940000
-      },
-       {
-        "name": "2012",
-        "value": 6500000
-      },
-      {
-        "name": "2013",
-        "value": 10960000
-      }
-    ]
-  }
-];
+    {
+      "name": "France",
+      "series": [
+        {
+          "name": "2010",
+          "value": 3300000
+        },
+        {
+          "name": "2011",
+          "value": 4940000
+        },
+        {
+          "name": "2012",
+          "value": 6500000
+        },
+        {
+          "name": "2013",
+          "value": 10960000
+        }
+      ]
+    }
+  ];
+
+
+
+  private series: any[] = [{
+    name: "India",
+    data: [3.907, 7.943, 7.848, 9.284, 9.263, 9.801, 3.890, 8.238, 9.552, 6.855]
+  }, {
+    name: "Russian Federation",
+    data: [4.743, 7.295, 7.175, 6.376, 8.153, 8.535, 5.247, -7.832, 4.3, 4.3]
+  }, {
+    name: "Germany",
+    data: [0.010, -0.375, 1.161, 0.684, 3.7, 3.269, 1.083, -5.127, 3.690, 2.995]
+  }, {
+    name: "World",
+    data: [1.988, 2.733, 3.994, 3.464, 4.001, 3.939, 1.333, -2.245, 4.339, 2.727]
+  }];
+  private categories: number[] = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011];
 
 
 
@@ -227,8 +244,8 @@ export class AppComponent {
   xAxisLabel = 'Country';
   showYAxisLabel = true;
   yAxisLabel = 'Population';
-  roundDomains ='false';
- 
+  roundDomains = 'false';
+
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
@@ -271,11 +288,14 @@ export class AppComponent {
   ];
 
 
-
-
-
   onSelect(event) {
     console.log(event);
+  }
+
+  title = 'Hello World!';
+
+  onButtonClick() {
+    this.title = 'Hello from Kendo UI!';
   }
 
 
