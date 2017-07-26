@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MdIconRegistry, MdDialog } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -7,12 +7,20 @@ import * as d3 from 'd3';
 
 import { DialogComponent } from './dialog/dialog.component';
 
+import { IProduct } from './produtos/product';
+import { ProductService } from './produtos/product.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+products: IProduct[];
+
+
+
 
   users = [
     {
@@ -79,7 +87,7 @@ export class AppComponent {
   selectedUser = this.users[0];
   isDarkTheme = false;
 
-  constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer, private dialog: MdDialog) {
+  constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer, private dialog: MdDialog, private _productService: ProductService) {
     // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
     const avatarsSafeUrl = sanitizer.bypassSecurityTrustResourceUrl('./assets/avatars.svg');
 
@@ -95,8 +103,12 @@ export class AppComponent {
       });
   }
 
-  //ngx-charts
-  card1: any[] = [
+  ngOnInit(): void {
+        this._productService.getProducts()
+                .subscribe(products => this.products = products);
+    }
+
+card1: any[] = [
     {
       name: 'Germany',
       value: 40632
@@ -286,6 +298,9 @@ export class AppComponent {
   closedInterpolationTypes = [
     'Basis Closed', 'Cardinal Closed', 'Catmull Rom Closed', 'Linear Closed'
   ];
+
+
+  
 
 
   onSelect(event) {

@@ -13,7 +13,7 @@
   <md-icon>more_vert</md-icon>
   </button>
   </md-toolbar>
-  <md-sidenav-container fxFlex>
+  <md-sidenav-container fxFlex class="scroll-area">
 
     <md-sidenav mode="side" opened>
       <md-tab-group md-stretch-tabs>
@@ -65,13 +65,7 @@
 
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
 
-      <md-card fxFlex="30">
-        <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
-        <h2>{{selectedUser.name}}</h2>
-        <p>{{selectedUser.details}}</p>
-      </md-card>
-
-      <md-card fxFlex="70">
+      <md-card fxFlex>
 
         <kendo-chart [categoryAxis]="{ categories: categories }">
           <kendo-chart-title text="Gross domestic product growth /GDP annual %/"></kendo-chart-title>

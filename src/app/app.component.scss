@@ -53,3 +53,7 @@ md-sidenav {
 /deep/ .mat-list-item-content {
   height: auto !important;
 }
+
+.scroll-area {
+    overflow: auto;
+}

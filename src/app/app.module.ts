@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -16,12 +17,15 @@ import {DialogComponent} from './dialog/dialog.component';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
+import { ProductService } from './produtos/product.service';
+
 import 'hammerjs';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +36,15 @@ import 'hammerjs';
     NgxChartsModule,
     BrowserAnimationsModule,
     ButtonsModule,
-    ChartsModule
+     ChartsModule
+    // RouterModule.forRoot([
+    //   { path: 'monitor', component: AppComponent },
+    //   { path: '', redirectTo: 'monitor', pathMatch: 'full' },
+    //   { path: '**', redirectTo: 'monitor', pathMatch: 'full' }
+    // ])
   ],
   providers: [
-
+  ProductService
   ],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
