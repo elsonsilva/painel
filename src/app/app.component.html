@@ -1,5 +1,5 @@
 <div id="normal" fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
-  <md-toolbar  color="primary">
+  <md-toolbar class="md-toolbar"  color="primary">
     <span><h6> MEIOS DIGITAIS</h6> </span>
     <div>
       <span fxFlex></span>
@@ -36,12 +36,13 @@
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
       <md-card fxFlex>
 
+        <!-- <kendo-chart [categoryAxis]="{ categories: categories }" renderAs="canvas"> -->
         <kendo-chart [categoryAxis]="{ categories: categories }">
           <kendo-chart-title text="Descricao_transacao"></kendo-chart-title>
           <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
           <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip>
           <kendo-chart-series>
-            <kendo-chart-series-item *ngFor="let item of products" type="line" style="smooth" [data]="item.data" [name]="item.name">
+            <kendo-chart-series-item *ngFor="let item of products" type="line" style="smooth" width="5" [data]="item.data" [name]="item.name">
             </kendo-chart-series-item>
           </kendo-chart-series>
         </kendo-chart>

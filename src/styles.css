@@ -2,8 +2,25 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,300";
 
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'futura35';
+    src: url('./assets/fonts/CoreSansG35-webfont.woff2') format('woff2'),
+         url('./assets/fonts/CoreSansG35-webfont.woff') format('woff'),
+         url('./assets/fonts/CoreSansG35-webfont.ttf') format('truetype'),
+         url('./assets/fonts/CoreSansG35-webfont.svg#core_sans_g_35_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-
+@font-face {
+    font-family: 'futura85';
+    src: url('./assets/fonts/CoreSansG85-webfont.woff2') format('woff2'),
+         url('./assets/fonts/CoreSansG85-webfont.woff') format('woff'),
+         url('./assets/fonts/CoreSansG85-webfont.ttf') format('truetype'),
+         url('./assets/fonts/CoreSansG85-webfont.svg#core_sans_g_35_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body {
   display: flex;
