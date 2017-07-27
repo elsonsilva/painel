@@ -11,7 +11,7 @@ import { IProduct } from './product';
 
 @Injectable()
 export class ProductService {
-    private _productUrl = 'api/products/products.json';
+    private _productUrl = 'assets/dados/products.json';
 
     constructor(private _http: Http) { }
 
@@ -20,11 +20,6 @@ export class ProductService {
             .map((response: Response) => <IProduct[]> response.json())
             .do(data => console.log('All: ' +  JSON.stringify(data)))
             .catch(this.handleError);
-    }
-
-    getProduct(id: number): Observable<IProduct> {
-        return this.getProducts()
-            .map((products: IProduct[]) => products.find(p => p.productId === id));
     }
 
     private handleError(error: Response) {
