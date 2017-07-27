@@ -11,7 +11,8 @@ import { IProduct } from './product';
 
 @Injectable()
 export class ProductService {
-    private _productUrl = 'assets/dados/products.json';
+     private _productUrl = 'assets/dados/products.json';
+    //private _productUrl = 'assets/dados/dados1.json';
 
     constructor(private _http: Http) { }
 

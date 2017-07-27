@@ -1,5 +1,5 @@
-<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
-  <md-toolbar color="primary">
+<div id="normal" fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+  <md-toolbar  color="primary">
     <span><h6> MEIOS DIGITAIS</h6> </span>
     <div>
       <span fxFlex></span>
@@ -37,7 +37,7 @@
       <md-card fxFlex>
 
         <kendo-chart [categoryAxis]="{ categories: categories }">
-          <kendo-chart-title text="Gross domestic product growth /GDP annual %/"></kendo-chart-title>
+          <kendo-chart-title text="Descricao_transacao"></kendo-chart-title>
           <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
           <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip>
           <kendo-chart-series>

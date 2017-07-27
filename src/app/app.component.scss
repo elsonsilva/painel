@@ -8,8 +8,19 @@ md-sidenav {
 }
 
  .md-toolbar {
-     height: 30px;
+    height: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    box-sizing: content-box;
+    outline: none;
+    padding: 0;
  }
+
+ #normal {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    box-sizing: content-box;
+    outline: none;
+    padding: 0;
+}
 
 .content {
   padding: 12px;
