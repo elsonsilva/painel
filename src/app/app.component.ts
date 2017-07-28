@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   title = 'Hello World!';
   errorMessage: string;
 
-  private categories: number[] = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011];
+  //private categories: number[] = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011];
 
   constructor(sanitizer: DomSanitizer, private _productService: ProductService) {
     // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
