@@ -26,10 +26,12 @@ md-sidenav {
  }
 
  #normal {
-    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+   font-family: futura35;
     box-sizing: content-box;
     outline: none;
-    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 1.8em;
 }
 
 .content {

@@ -1,5 +1,5 @@
 <div id="normal" fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
-  <md-toolbar class="md-toolbar"  color="primary">
+  <md-toolbar class="md-toolbar" color="primary">
     <span><h6> MEIOS DIGITAIS</h6> </span>
     <div>
       <span fxFlex></span>
@@ -23,7 +23,8 @@
         </md-tab>
       </md-tab-group>
     </md-sidenav>
-
+    <div fxFlexAlign="center" >Loterias - Registra Aposta - Mega-Sena</div>
+    
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
       <md-card fxFlex>
       </md-card>
@@ -34,27 +35,72 @@
     </div>
 
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
-      <md-card fxFlex>
+      <md-card fxFlex="66.37">
 
         <!-- <kendo-chart [categoryAxis]="{ categories: categories }" renderAs="canvas"> -->
         <!-- <kendo-chart [categoryAxis]="{ categories: categories }"> -->
-          <kendo-chart>
-          <kendo-chart-title text="Movimento do dia" align="center"></kendo-chart-title>
+        <kendo-chart renderAs="canvas">
+          <kendo-chart-title text="Movimento do Dia" align="center"></kendo-chart-title>
           <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
-            <kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
-            
+          <kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
+          <kendo-chart-value-axis>
+              <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
+              </kendo-chart-value-axis-item>
+          </kendo-chart-value-axis>
+          <kendo-chart-category-axis>
+              <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
+              </kendo-chart-category-axis-item>
+          </kendo-chart-category-axis>
           <kendo-chart-series>
             <!-- <kendo-chart-series-item *ngFor="let item of products" type="line" style="smooth" width="5" [data]="item.data" [name]="item.name"> -->
-               <kendo-chart-series-item type="line" style="smooth" width="5" [data]="products" field="QTD_HIST" categoryField="HORA" > 
-                 <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
-                 
-                 <!-- <kendo-chart-series-item  *ngFor="let item of products" type="line" style="smooth" width="5"  [data]="item.QTD_HIST" [name]="item.QTD_HIST" field="QTD_HIST" categoryField="HORA" > -->
+            <kendo-chart-series-item name="Histórico" type="line" style="smooth" width="5" [data]="products" field="QTD_HIST" categoryField="HORA">
+              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
+              <!-- <kendo-chart-series-item  *ngFor="let item of products" type="line" style="smooth" width="5"  [data]="item.QTD_HIST" [name]="item.QTD_HIST" field="QTD_HIST" categoryField="HORA" > -->
             </kendo-chart-series-item>
-                 <kendo-chart-series-item type="line" style="smooth" width="5" [data]="products" field="QTD_AFER" categoryField="HORA" > 
-                   <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
-                 </kendo-chart-series-item>
+
+            <kendo-chart-series-item name="Aferido" type="line" style="smooth" width="5" [data]="products" field="QTD_AFER" categoryField="HORA">
+              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
+            </kendo-chart-series-item>
+
           </kendo-chart-series>
-          </kendo-chart>
+        </kendo-chart>
+
+      </md-card>
+      <md-card fxFlex>
+      </md-card>
+    </div>
+
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+      <md-card fxFlex>
+      </md-card>
+      <md-card fxFlex="66.37">
+
+        <kendo-chart>
+          <kendo-chart-title text="Acumulado do Dia" align="center"></kendo-chart-title>
+          <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+          
+          <kendo-chart-value-axis>
+              <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
+              </kendo-chart-value-axis-item>
+          </kendo-chart-value-axis>
+
+          <kendo-chart-category-axis>
+              <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
+              </kendo-chart-category-axis-item>
+          </kendo-chart-category-axis>
+
+          <kendo-chart-series>
+
+            <kendo-chart-series-item name="Histórico Acumulado" type="area" [data]="products" field="QTD_HIST_ACUM" categoryField="HORA">
+              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
+            </kendo-chart-series-item>
+
+            <kendo-chart-series-item name="Aferido Acumulado" type="area" [data]="products" field="QTD_AFER_ACUM" categoryField="HORA">
+              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
+            </kendo-chart-series-item>
+
+          </kendo-chart-series>
+        </kendo-chart>
 
       </md-card>
     </div>
