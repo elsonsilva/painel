@@ -1,11 +1,11 @@
 <div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
-  <md-toolbar  color="primary">
-    <div class="md-toolbar" fxFlexAlign="center" >MeiosDigitais</div>
+  <md-toolbar color="primary">
+    <div class="md-toolbar" fxFlexAlign="center">MeiosDigitais</div>
     <!-- <span><h6> MEIOS DIGITAIS</h6> </span> -->
     <div>
       <span fxFlex></span>
-      <button md-button class="md-toolbar" fxFlexAlign="center" > Sumário  </button>
-      <button md-button class="md-toolbar" fxFlexAlign="center" >  Campanhas  </button>
+      <button md-button class="md-toolbar" fxFlexAlign="center"> Sumário  </button>
+      <button md-button class="md-toolbar" fxFlexAlign="center">  Campanhas  </button>
     </div>
     <!-- Filler that pushes the menu button to the end of the toolbar -->
     <span fxFlex></span>
@@ -28,32 +28,35 @@
       </md-tab-group>
     </md-sidenav>
     <!-- <md-toolbar class="md-toolbar" color="none">Loterias - Registra Aposta - Mega-Sena</md-toolbar> -->
-    
-    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
-      <md-card fxFlex>
-      </md-card>
-      <md-card fxFlex>
-      </md-card>
-      <md-card fxFlex>
-      </md-card>
-    </div>
 
-    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+    <!-- <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
+      <md-card fxFlex>
+      </md-card>
+      <md-card fxFlex>
+      </md-card>
+      <md-card fxFlex>
+      </md-card>
+    </div> -->
+    <div fxLayout="row" fxLayout.sm="column" fxLayoutAlign="space-around center">
+                        <legend style="font-size: 1.3em;padding-top:8px;">Loterias - Mega-Sena</legend>
+  </div>
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
       <md-card fxFlex="66.37">
+        <md-card-title align="center">Movimento do Dia</md-card-title>
 
         <!-- <kendo-chart [categoryAxis]="{ categories: categories }" renderAs="canvas"> -->
         <!-- <kendo-chart [categoryAxis]="{ categories: categories }"> -->
-        <kendo-chart renderAs="canvas">
-          <kendo-chart-title text="Movimento do Dia" align="center"></kendo-chart-title>
+        <kendo-chart  style="height: 300px;">
+          <!-- <kendo-chart-title text="Movimento do Dia" align="center"></kendo-chart-title> -->
           <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
           <kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
           <kendo-chart-value-axis>
-              <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
-              </kendo-chart-value-axis-item>
+            <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
+            </kendo-chart-value-axis-item>
           </kendo-chart-value-axis>
           <kendo-chart-category-axis>
-              <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
-              </kendo-chart-category-axis-item>
+            <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
+            </kendo-chart-category-axis-item>
           </kendo-chart-category-axis>
           <kendo-chart-series>
             <!-- <kendo-chart-series-item *ngFor="let item of products" type="line" style="smooth" width="5" [data]="item.data" [name]="item.name"> -->
@@ -74,26 +77,24 @@
       </md-card>
     </div>
 
-    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
       <md-card fxFlex>
+        <md-card-title align="center">Percentual de Atingimento da Meta</md-card-title>
 
-      <kendo-chart fxFlexAlign="top" background="none">
-        <kendo-chart-title text="Percentual de Atingimento da Meta" align="center"></kendo-chart-title>
-        <kendo-chart-legend [visible]="false"></kendo-chart-legend>
+        <kendo-chart fxFlexAlign="top" background="none" style="height: 300px;">
+          <!-- <kendo-chart-title text="Percentual de Atingimento da Meta" align="center"></kendo-chart-title> -->
+          <kendo-chart-legend [visible]="false"></kendo-chart-legend>
 
-        
-      <ng-template kendoChartDonutCenterTemplate>
-        <h2>22.5%</h2>
-      </ng-template>
-      <kendo-chart-series>
-         <kendo-chart-series-item
-            type="donut" [data]="datadonut"
-            categoryField="kind" field="share">
-            <kendo-chart-series-item-labels position="outsideEnd" background="none"
-                                            [content]="labelContent">
-            </kendo-chart-series-item-labels>
-        </kendo-chart-series-item> 
-          <!-- <kendo-chart-series-item *ngFor="let series of datadonut; let outermost = last;"
+
+          <ng-template kendoChartDonutCenterTemplate>
+            <h2>22.5%</h2>
+          </ng-template>
+          <kendo-chart-series>
+            <kendo-chart-series-item type="donut" [data]="datadonut" categoryField="kind" field="share">
+              <kendo-chart-series-item-labels position="outsideEnd" background="none" [content]="labelContent">
+              </kendo-chart-series-item-labels>
+            </kendo-chart-series-item>
+            <!-- <kendo-chart-series-item *ngFor="let series of datadonut; let outermost = last;"
                                    type="donut" [startAngle]="150"
                                    [name]="series.kind" [data]="series.share"
                                    field="value" categoryField="category" colorField="color">
@@ -102,32 +103,34 @@
                                             [content]="labelContent">
             </kendo-chart-series-item-labels>
           </kendo-chart-series-item> -->
-      </kendo-chart-series>
-    </kendo-chart>
+          </kendo-chart-series>
+        </kendo-chart>
 
       </md-card>
       <md-card fxFlex="66.37">
+        <md-card-title align="center" >Acumulado do Dia</md-card-title>
 
-        
-        <kendo-chart  >
-          
-          
+        <kendo-chart  style="height: 300px;">
+
+
           <!-- <kendo-chart-zoomable mousewheel="MousewheelZoom" selection="DragAction"> -->
-          
-          <kendo-chart-title text="Acumulado do Dia" align="center"></kendo-chart-title>
+
+          <!-- <kendo-chart-title text="Acumulado do Dia" align="center"></kendo-chart-title> -->
           <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
-          
-          <kendo-chart-value-axis >
-              <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }" >
-              </kendo-chart-value-axis-item>
+
+          <kendo-chart-value-axis>
+            <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
+            </kendo-chart-value-axis-item>
           </kendo-chart-value-axis>
 
 
-          <kendo-chart-category-axis >
-              <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
-              </kendo-chart-category-axis-item>
+          <kendo-chart-category-axis>
+            <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
+            </kendo-chart-category-axis-item>
           </kendo-chart-category-axis>
 
+          <kendo-chart-plot-area background="none">
+          </kendo-chart-plot-area>
 
           <kendo-chart-series>
 
@@ -141,9 +144,9 @@
 
           </kendo-chart-series>
           <!-- </kendo-chart-zoomable> -->
-        
+
         </kendo-chart>
-        
+
 
       </md-card>
     </div>

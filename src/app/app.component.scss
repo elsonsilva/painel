@@ -5,6 +5,10 @@
   flex: 1;
 }
 
+.legend{
+  font-size: 2.2em;
+}
+
 md-sidenav {
   width: 250px;
 }
@@ -25,14 +29,14 @@ md-sidenav {
     //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
  }
 
- .kendoButton {
-   font-family: futura35;
-   height: 25px;
-    font-size: 0.8em;
-    box-sizing: content-box;
-    padding-left: 10px;
-    //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
- }
+//  .kendoButton {
+//    font-family: futura35;
+//    height: 25px;
+//     font-size: 0.8em;
+//     box-sizing: content-box;
+//     padding-left: 10px;
+//     //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+//  }
 
 //  #normal {
 //    font-family: futura35;
@@ -44,14 +48,17 @@ md-sidenav {
 // }
 
 .content {
-  padding: 12px;
+  padding-left:10px;
+  padding-top:10px;
+  padding-right:10px;
+  padding-bottom:0px;
 }
 
-.cardchart {
-  padding: 5px;
-  width: 80%;
-  height: 100%;
-}
+// .cardchart {
+//   padding: 5px;
+//   width: 80%;
+//   height: 100%;
+// }
 
 @media (max-width: 960px) 
 {
@@ -83,3 +90,4 @@ md-sidenav {
 .scroll-area {
     overflow: auto;
 }
+
