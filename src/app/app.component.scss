@@ -11,23 +11,79 @@
 
 md-sidenav {
   width: 250px;
+  box-shadow: 4px 0px 4px -1px rgba(0,0,0,0.35);
 }
 
-// #titulo-toolbar {
-//     font-family: futura85;
-//     font-size: 1em;
-//     // text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-//     padding-bottom: 1.5em;
-// }
+.titulo {
+font-family: futura85;
 
-.md-toolbar {
+    font-size: 1.2em;
+    padding-left: 2px;
+    padding-right: 0px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+  .titulocaixa {
+font-family: futura35;
+
+    font-size: 1.2em;
+    padding-left: 0px;
+    padding-right: 10px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+  .subtitulo {
+     background-color: #D0E0E3;
+font-family: futura35;
+
+    font-size: 1.6em;
+    padding-left: 40px;
+    padding-right: 10px;
+    box-shadow: 0px -2px 6px -1px rgba(0,0,0,0.75);
+
+}
+
+  .posicaosubtitulo {
+     background-color: #D0E0E3;
+font-family: futura35;
+
+    font-size: 1.8em;
+    text-align: right;
+    padding-right: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+ .barratitulo {
+   font-family: futura35;
+
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+
+    //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+ }
+
+.list-wrapper {
+    border-top: 1px solid #6abd2d;
+    border-bottom: 1px solid #6abd2d;
+    font-family: futura35;
+
+    font-size: 1.2em;
+    // padding: 1.25em 0;
+    // margin-left: 2.5em;
+}
+
+.btnavbar {
    font-family: futura35;
 
     font-size: 1.2em;
     padding-left: 50px;
     padding-right: 50px;
+    //box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
     //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
  }
+
+
 
 //  .kendoButton {
 //    font-family: futura35;

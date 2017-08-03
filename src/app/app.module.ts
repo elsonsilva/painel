@@ -10,7 +10,7 @@ import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {AppComponent} from './app.component';
-import {NgxChartsModule} from '@swimlane/ngx-charts';
+//import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {DialogComponent} from './dialog/dialog.component';
 
 // Import the ButtonsModule
@@ -33,7 +33,6 @@ import 'hammerjs';
     HttpModule,
     MaterialModule,
     FlexLayoutModule,
-    NgxChartsModule,
     BrowserAnimationsModule,
     ButtonsModule,
     ChartsModule

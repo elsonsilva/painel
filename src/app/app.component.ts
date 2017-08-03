@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MdIconRegistry, MdDialog } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import * as shape from 'd3-shape';
-import * as d3 from 'd3';
+//import * as shape from 'd3-shape';
+//import * as d3 from 'd3';
 
 import { DialogComponent } from './dialog/dialog.component';
 
@@ -16,6 +16,19 @@ import { ProductService } from './product.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+
+   single: any[];
+  multi: any[];
+
+  view: any[] = [700, 400];
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C']
+  };
+
+
+
 
   products: IProduct[] = [];
 
