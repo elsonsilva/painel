@@ -17,6 +17,7 @@ import {DialogComponent} from './dialog/dialog.component';
 import {ChartsModule} from '@progress/kendo-angular-charts';
 import {ButtonsModule} from '@progress/kendo-angular-buttons';
 
+
 import {ProductService} from './product.service';
 
 import 'hammerjs';

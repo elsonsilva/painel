@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.3.1",
+    "@angular/animations": "^4.3.3",
     "@angular/cdk": "github:angular/cdk-builds",
     "@angular/common": "^4.3.1",
     "@angular/compiler": "^4.3.1",
@@ -26,6 +26,9 @@
     "@progress/kendo-angular-charts": "^1.2.2",
     "@progress/kendo-angular-intl": "^1.2.1",
     "@progress/kendo-angular-l10n": "^1.0.2",
+    "@progress/kendo-angular-label": "^1.0.3",
+    "@progress/kendo-angular-scrollview": "^1.0.3",
+    "@progress/kendo-data-query": "^1.0.6",
     "@progress/kendo-drawing": "^1.1.2",
     "@progress/kendo-theme-default": "^2.38.2",
     "@swimlane/ngx-charts": "^6.0.0",

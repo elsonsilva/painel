@@ -9,6 +9,8 @@ import { DialogComponent } from './dialog/dialog.component';
 
 import { IProduct } from './product';
 import { ProductService } from './product.service';
+import { distinct } from '@progress/kendo-data-query';
+
 
 @Component({
   selector: 'app-root',
@@ -26,6 +28,7 @@ export class AppComponent implements OnInit {
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C']
   };
+
 
 
 
@@ -52,18 +55,23 @@ export class AppComponent implements OnInit {
 
   constructor(sanitizer: DomSanitizer, private _productService: ProductService) {
     // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
+      
   }
 
   ngOnInit(): void {
     this._productService.getProducts()
       .subscribe(products => {
         this.products = products;
+        
       },
       error => this.errorMessage = <any>error);
   }
+    
+  
 
   onButtonClick() {
     this.title = 'Hello from Kendo UI!';
   }
 
+  
 }

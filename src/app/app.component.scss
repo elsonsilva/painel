@@ -1,89 +1,67 @@
-
-
 :host {
   display: flex;
   flex: 1;
 }
 
-.legend{
+.legend {
   font-size: 2.2em;
 }
 
 md-sidenav {
-  width: 250px;
-  box-shadow: 4px 0px 4px -1px rgba(0,0,0,0.35);
+  width: 265px;
+  box-shadow: 4px 0px 4px -1px rgba(0, 0, 0, 0.35);
 }
 
 .titulo {
-font-family: futura85;
-
-    font-size: 1.2em;
-    padding-left: 2px;
-    padding-right: 0px;
-    text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-}
-  .titulocaixa {
-font-family: futura35;
-
-    font-size: 1.2em;
-    padding-left: 0px;
-    padding-right: 10px;
-    text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  font-family: futura85;
+  font-size: 1.4em;
+  padding-left: 2px;
+  padding-right: 0px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
-  .subtitulo {
-     background-color: #D0E0E3;
-font-family: futura35;
-
-    font-size: 1.6em;
-    padding-left: 40px;
-    padding-right: 10px;
-    box-shadow: 0px -2px 6px -1px rgba(0,0,0,0.75);
-
+.titulocaixa {
+  font-family: futura35;
+  font-size: 1.4em;
+  padding-left: 0px;
+  padding-right: 10px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, .38), 0 8px 16px rgba(0, 0, 0, .48);
 }
 
-  .posicaosubtitulo {
-     background-color: #D0E0E3;
-font-family: futura35;
-
-    font-size: 1.8em;
-    text-align: right;
-    padding-right: 10px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+.subtitulo {
+  //background-color: #48586C;
+  background-color: #EFF5F6;
+  font-family: futura35;
+  font-size: 1.5em;
+  padding-left: 60px;
+  padding-right: 10px;
+  min-height: 20px;
+  box-shadow: 0px -2px 6px -1px rgba(0, 0, 0, 0.75);
 }
 
- .barratitulo {
-   font-family: futura35;
-
-    font-size: 1.2em;
-    padding-left: 10px;
-    padding-right: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-
-    //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
- }
+.barratitulo {
+  font-family: futura35;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28); //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
 
 .list-wrapper {
-    border-top: 1px solid #6abd2d;
-    border-bottom: 1px solid #6abd2d;
-    font-family: futura35;
-
-    font-size: 1.2em;
-    // padding: 1.25em 0;
-    // margin-left: 2.5em;
+  border-top: 1px solid #6abd2d;
+  border-bottom: 1px solid #6abd2d;
+  font-family: futura35;
+  font-size: 1.2em; // padding: 1.25em 0;
+  // margin-left: 2.5em;
 }
 
 .btnavbar {
-   font-family: futura35;
-
-    font-size: 1.2em;
-    padding-left: 50px;
-    padding-right: 50px;
-    //box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-    //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
- }
-
-
+  font-family: futura35;
+  font-size: 1.4em;
+  padding-left: 50px;
+  padding-right: 50px; //box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
 
 //  .kendoButton {
 //    font-family: futura35;
@@ -93,7 +71,6 @@ font-family: futura35;
 //     padding-left: 10px;
 //     //text-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 //  }
-
 //  #normal {
 //    font-family: futura35;
 //     box-sizing: content-box;
@@ -102,12 +79,11 @@ font-family: futura35;
 //     text-align: center;
 //     font-size: 1.8em;
 // }
-
 .content {
-  padding-left:10px;
-  padding-top:10px;
-  padding-right:10px;
-  padding-bottom:0px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
 }
 
 // .cardchart {
@@ -115,14 +91,12 @@ font-family: futura35;
 //   width: 80%;
 //   height: 100%;
 // }
-
-@media (max-width: 960px) 
-{
-.cardchart {
-  padding: 5px;
-  width: 80%;
-  height: 100%;
-}
+@media (max-width: 960px) {
+  .cardchart {
+    padding: 5px;
+    width: 80%;
+    height: 100%;
+  }
 }
 
 /deep/ md-icon.avatar {
@@ -144,6 +118,5 @@ font-family: futura35;
 }
 
 .scroll-area {
-    overflow: auto;
+  overflow: auto;
 }
-
