@@ -1,0 +1,22 @@
+<div>
+  <table *ngIf='totais && totais.length' >
+    <tr >
+      <td >META</td>
+    </tr>
+    <tr *ngFor='let total of totais'>
+      <td class="tb_num">{{ total.META_DIA }}</td>
+    </tr>
+    <tr >
+      <td >AFERIDO</td>
+      </tr>
+    <tr *ngFor='let total of totais'>
+      <td class="tb_num">{{ total.AFER_DIA}}</td>
+    </tr>
+    <tr >
+      <td >GAP</td>
+      </tr>
+    <tr *ngFor='let total of totais'>
+      <td class="tb_num">{{ total.GAP_AFER_META }}</td>
+    </tr>
+  </table>
+</div>

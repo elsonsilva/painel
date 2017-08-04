@@ -48,7 +48,7 @@
 
         <!-- <kendo-chart [categoryAxis]="{ categories: categories }" renderAs="canvas"> -->
         <!-- <kendo-chart [categoryAxis]="{ categories: categories }"> -->
-        <kendo-chart renderAs="canvas" style="height: 280px;">
+        <kendo-chart style="height: 280px;">
           <!-- <kendo-chart-title text="Movimento do Dia" align="center"></kendo-chart-title> -->
           <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
           <kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
@@ -83,48 +83,18 @@
      
 
 
-        <div class='table-responsive'>
-            <table class='table' *ngIf='products && products.length'>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>5 Star Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor='let product of products'>
-                         <td>{{ product.Descricao_transacao }}</td>
-                        <td>{{ product.Date }}</td> 
-
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <app-totais></app-totais>
 
 
 
       </md-card>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
       <md-card fxFlex>
         <md-card-title align="center">Atingimento da Meta</md-card-title>
 
-        <kendo-chart renderAs="canvas" fxFlexAlign="top" style="height: 280px;">
+        <kendo-chart fxFlexAlign="top" style="height: 280px;">
           <!-- <kendo-chart-title text="Percentual de Atingimento da Meta" align="center"></kendo-chart-title> -->
           <kendo-chart-legend [visible]="false"></kendo-chart-legend>
 
@@ -153,7 +123,7 @@
       <md-card fxFlex="66.37">
         <md-card-title align="center">Acumulado do Dia</md-card-title>
 
-        <kendo-chart renderAs="canvas" style="height: 280px;">
+        <kendo-chart style="height: 280px;">
 
 
           <!-- <kendo-chart-zoomable mousewheel="MousewheelZoom" selection="DragAction"> -->
@@ -178,11 +148,15 @@
           <kendo-chart-series>
 
             <kendo-chart-series-item name="Histórico Acumulado" type="line" [data]="products" field="QTD_HIST_ACUM" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
+              <kendo-chart-series-item-labels visible="true" format="{0:n}"></kendo-chart-series-item-labels>
             </kendo-chart-series-item>
 
             <kendo-chart-series-item name="Aferido Acumulado" type="area" [data]="products" field="QTD_AFER_ACUM" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
+              <kendo-chart-series-item-labels visible="true" format="{0:n}"></kendo-chart-series-item-labels>
+            </kendo-chart-series-item>
+
+            <kendo-chart-series-item name="Meta" type="line" [data]="products" field="META_DIA" categoryField="HORA">
+              <kendo-chart-series-item-labels visible="true" format="{0:n}"></kendo-chart-series-item-labels>
             </kendo-chart-series-item>
 
           </kendo-chart-series>

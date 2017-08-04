@@ -7,8 +7,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { DialogComponent } from './dialog/dialog.component';
 
-import { IProduct } from './product';
+import { IProduct} from './product';
 import { ProductService } from './product.service';
+import { TotaisService } from './totais.service';
 import { distinct } from '@progress/kendo-data-query';
 
 
@@ -20,7 +21,7 @@ import { distinct } from '@progress/kendo-data-query';
 export class AppComponent implements OnInit {
 
 
-   single: any[];
+  single: any[];
   multi: any[];
 
   view: any[] = [700, 400];
@@ -34,6 +35,8 @@ export class AppComponent implements OnInit {
 
 
   products: IProduct[] = [];
+
+  
 
   isDarkTheme = false;
   title = 'Hello World!';
@@ -50,28 +53,30 @@ export class AppComponent implements OnInit {
   }];
 
   public labelContent(e: any): string {
-        return `${ e.category }: \n ${e.value}%`;
-    }
+    return `${e.category}: \n ${e.value}%`;
+  }
 
-  constructor(sanitizer: DomSanitizer, private _productService: ProductService) {
+  constructor(sanitizer: DomSanitizer, private _productService: ProductService, private _totaisService: TotaisService) {
     // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
-      
+
   }
 
   ngOnInit(): void {
     this._productService.getProducts()
       .subscribe(products => {
         this.products = products;
-        
       },
+      // this._totaisService.getTotais()
+      // .subscribe(totais => {
+      //   this.totais = totais;
+      // }
       error => this.errorMessage = <any>error);
   }
-    
-  
+
 
   onButtonClick() {
     this.title = 'Hello from Kendo UI!';
   }
 
-  
+
 }

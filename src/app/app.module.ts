@@ -10,6 +10,7 @@ import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {AppComponent} from './app.component';
+import { TotaisComponent } from './totais/totais.component';
 //import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {DialogComponent} from './dialog/dialog.component';
 
@@ -18,15 +19,18 @@ import {ChartsModule} from '@progress/kendo-angular-charts';
 import {ButtonsModule} from '@progress/kendo-angular-buttons';
 
 
-import {ProductService} from './product.service';
+import { ProductService } from './product.service';
+import { TotaisService } from './totais.service';
 
 import 'hammerjs';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent
+    DialogComponent,
+    TotaisComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import 'hammerjs';
     // ])
   ],
   providers: [
-  ProductService
+  ProductService,
+  TotaisService
   ],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
