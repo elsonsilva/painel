@@ -12,7 +12,7 @@ $theme: mat-light-theme($primary, $accent);
 
 .dark-theme {
   $dark-primary: mat-palette($mat-light-blue);
-  $dark-accent: mat-palette($mat-green);
+  $dark-accent: mat-palette($mat-blue-grey, 400);
 
   $dark-theme: mat-dark-theme($dark-primary, $dark-accent);
 

@@ -12,7 +12,7 @@ import { ITotais } from './totais';
 @Injectable()
 export class TotaisService {
     // private _productUrl = 'assets/dados/products.json';
-    private _totaisUrl = 'assets/dados/dados2.json';
+    private _totaisUrl = 'assets/dados/METAS_DIA.json';
 
     constructor(private _http: Http) { }
 

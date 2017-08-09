@@ -4,10 +4,19 @@
   font-family: futura35;
   padding-left: 2px;
   padding-right: 2px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 0.8em;
 }
 
 .tb_num {
-    font-size: 4em;
+    font-size: 1.8em;
     text-align: right;
+    width: 250px;
+    
 }
+
+.tb_nome {
+    font-size: 1em;
+    text-align: left;
+}
+

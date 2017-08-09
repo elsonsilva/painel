@@ -23,6 +23,7 @@ import { ProductService } from './product.service';
 import { TotaisService } from './totais.service';
 
 import 'hammerjs';
+import { PercentualComponent } from './percentual/percentual.component';
 
 
 
@@ -30,7 +31,8 @@ import 'hammerjs';
   declarations: [
     AppComponent,
     DialogComponent,
-    TotaisComponent
+    TotaisComponent,
+    PercentualComponent
   ],
   imports: [
     BrowserModule,

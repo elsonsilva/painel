@@ -1,9 +1,13 @@
 export interface ITotais {
   DATA: Date;
+  DIA_UTIL: number;
+  HORA: number;
   NU_TRANSACAO: number;
   Descricao_transacao: string;
-  META_DIA: number;
-  AFER_DIA: number;
-  GAP_AFER_META: number;
-  PER_META: number;
+  QTD_META_DIA: number;
+  QTD_AFER_ACUM: number;
+  GAP: number;
+  PERC: number;
+  kind: string;
+  share: number;
 }
