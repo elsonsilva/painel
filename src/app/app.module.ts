@@ -11,6 +11,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {AppComponent} from './app.component';
 import { TotaisComponent } from './totais/totais.component';
+// import { PercentualComponent } from './percentual/percentual.component';
 //import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {DialogComponent} from './dialog/dialog.component';
 
@@ -20,10 +21,11 @@ import {ButtonsModule} from '@progress/kendo-angular-buttons';
 
 
 import { ProductService } from './product.service';
-import { TotaisService } from './totais.service';
+import { Product2Service } from './meta.service';
+import { TotaisDiaService } from './totais-dia.service';
 
 import 'hammerjs';
-import { PercentualComponent } from './percentual/percentual.component';
+
 
 
 
@@ -31,8 +33,8 @@ import { PercentualComponent } from './percentual/percentual.component';
   declarations: [
     AppComponent,
     DialogComponent,
-    TotaisComponent,
-    PercentualComponent
+    TotaisComponent
+    //PercentualComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { PercentualComponent } from './percentual/percentual.component';
   ],
   providers: [
   ProductService,
-  TotaisService
+  Product2Service,
+  TotaisDiaService
   ],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]

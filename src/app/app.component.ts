@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { MdIconRegistry, MdDialog } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -7,9 +7,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { DialogComponent } from './dialog/dialog.component';
 
-import { IProduct} from './product';
+import { IProduct } from './product';
+import { IProduct2 } from './product2';
 import { ProductService } from './product.service';
-import { TotaisService } from './totais.service';
+import { Product2Service } from './meta.service';
+import { TotaisDiaService } from './totais-dia.service';
 import { distinct } from '@progress/kendo-data-query';
 
 
@@ -30,14 +32,9 @@ export class AppComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C']
   };
 
-
-
-
-
   products: IProduct[] = [];
-
+  products2: IProduct2[] = [];
   
-
   isDarkTheme = false;
   title = 'Hello World!';
   errorMessage: string;
@@ -56,7 +53,7 @@ export class AppComponent implements OnInit {
     return `${e.category}: \n ${e.value}%`;
   }
 
-  constructor(sanitizer: DomSanitizer, private _productService: ProductService, private _totaisService: TotaisService) {
+  constructor(sanitizer: DomSanitizer, private _productService: ProductService, private _product2Service: Product2Service, private _totaisDiaService: TotaisDiaService) {
     // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
 
   }
@@ -73,6 +70,17 @@ export class AppComponent implements OnInit {
       error => this.errorMessage = <any>error);
   }
 
+  ngAfterContentInit(): void {
+    this._product2Service.getProducts2()
+      .subscribe(products2 => {
+        this.products2 = products2;
+      },
+      // this._totaisService.getTotais()
+      // .subscribe(totais => {
+      //   this.totais = totais;
+      // }
+      error => this.errorMessage = <any>error);
+  }
 
   onButtonClick() {
     this.title = 'Hello from Kendo UI!';

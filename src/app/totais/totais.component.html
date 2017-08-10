@@ -1,56 +1,34 @@
 <div>
-  <table *ngIf='totais && totais.length'>
-    <tr>
+  <table *ngIf='totaisDia && totaisDia.length'>
+    <tr >
       <td class="tb_nome">META</td>
-
-    </tr>
     <!-- <tr *ngFor='let total of totais'>  -->
-    <tr>
+      <!-- <td class="tb_num">{{ total.QTD_META_DIA | number : '1.2-2' }}</td>  {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} -->
+      <td class="tb_num">30000</td>
+    </tr>
+    <tr >
+      <td class="tb_nome">HISTORICO</td>
+    <!-- <tr *ngFor='let total of totais'>  -->
       <!-- <td class="tb_num">{{ total.QTD_META_DIA }}</td> -->
       <td class="tb_num">30000</td>
-
     </tr>
-    <hr>
-    <tr>
-      <td class="tb_nome">HISTÓRICO</td>
-
-    </tr>
-    <!-- <tr *ngFor='let total of totais'>  -->
-    <tr>
-      <!-- <td class="tb_num">{{ total.QTD_META_DIA }}</td> -->
-      <td class="tb_num">20000</td>
-
-
-    </tr>
-    <hr>
-    <tr>
+    <tr >
       <td class="tb_nome">AFERIDO</td>
-    </tr>
     <!-- <tr *ngFor='let total of totais'>  -->
-    <tr>
-      <!-- <td class="tb_num">{{ total.QTD_AFER_ACUM}}</td> -->
-      <td class="tb_num">15000</td>
-
+      <!-- <td class="tb_num">{{ total.QTD_META_DIA }}</td> -->
+      <td class="tb_num">30000</td>
     </tr>
-    <hr>
-    <tr>
+    <tr >
       <td class="tb_nome">GAP HISTÓRICO</td>
-    </tr>
     <!-- <tr *ngFor='let total of totais'>  -->
-    <tr>
-      <!-- <td class="tb_num">{{ total.GAP }}</td> -->
-      <td class="tb_num">10000</td>
-
+      <!-- <td class="tb_num">{{ total.QTD_META_DIA }}</td> -->
+      <td class="tb_num">30000</td>
     </tr>
-    <hr>
-    <tr>
+    <tr >
       <td class="tb_nome">GAP META</td>
-    </tr>
     <!-- <tr *ngFor='let total of totais'>  -->
-    <tr>
-      <!-- <td class="tb_num">{{ total.GAP }}</td> -->
-      <td class="tb_num">9000</td>
-
+      <!-- <td class="tb_num">{{ total.QTD_META_DIA }}</td> -->
+      <td class="tb_num">30000</td>
     </tr>
 
   </table>

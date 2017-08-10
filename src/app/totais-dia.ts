@@ -1,4 +1,4 @@
-export interface ITotais {
+export interface ITotaisDia {
   DATA: Date;
   DIA_UTIL: number;
   HORA: number;
