@@ -9,14 +9,19 @@
 }
 
 .tb_num {
-    font-size: 1.8em;
+    font-size: 2em;
     text-align: right;
     width: 250px;
-    
+    border-bottom: 2px solid #E0E0E0;
+  font-family: futura35;
+  padding-top: 20px;    
 }
 
 .tb_nome {
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: left;
+    border-bottom: 2px solid #E0E0E0;
+  font-family: futura35;
+  padding-top: 20px;
 }
 
