@@ -7,19 +7,19 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
-import { ITotais } from './totais';
+import { IMovimento } from './movimento';
 
 @Injectable()
-export class TotaisDiaService {
+export class MovimentoService {
     // private _productUrl = 'assets/dados/products.json';
-    private _totaisUrl = 'assets/dados/TOTAIS_DIA.json';
+    private _movimentoUrl = 'assets/dados/MOVIMENTO_DIA.json';
 
     constructor(private _http: Http) { }
 
-    getTotais(): Observable<ITotais[]> {
-        return this._http.get(this._totaisUrl)
-            .map((response: Response) => <ITotais[]> response.json())
-            .do(data => console.log('TOTAIS: ' +  JSON.stringify(data)))
+    getProducts(): Observable<IMovimento[]> {
+        return this._http.get(this._movimentoUrl)
+            .map((response: Response) => <IMovimento[]> response.json())
+            .do(data => console.log('MOVIMENTO: ' +  JSON.stringify(data)))
             .catch(this.handleError);
     }
 

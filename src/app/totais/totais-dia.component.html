@@ -1,0 +1,27 @@
+<div>
+  <table *ngIf='totaisDia && totaisDia.length'>
+    <tr *ngFor='let totalDia of totaisDia'> 
+      <td class="tb_nome">META</td>
+      <!-- <td class="tb_num">{{ total.QTD_META_DIA | number : '1.2-2' }}</td>  {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} -->
+      <td class="tb_num">{{ totalDia.QTD_META_DIA | number : '1.0-2' }}</td>
+    </tr>
+    <tr *ngFor='let totalDia of totaisDia'> 
+      <td class="tb_nome">HISTORICO</td>
+    <!-- <tr *ngFor='let total of totais'>  -->
+      <td class="tb_num">{{ totalDia.QTD_HIST_ACUM_DIA | number : '1.0-2' }}</td>
+    </tr>
+    <tr *ngFor='let totalDia of totaisDia'> 
+      <td class="tb_nome">AFERIDO</td>
+      <td class="tb_num">{{ totalDia.QTD_AFER_ACUM_DIA | number : '1.0-2' }}</td>
+    </tr>
+    <tr *ngFor='let totalDia of totaisDia'> 
+      <td class="tb_nome">GAP HISTÓRICO</td>
+      <td class="tb_num">{{ totalDia.QTD_GAP_HIST_DIA | number : '1.0-2' }}</td>
+    </tr>
+    <tr *ngFor='let totalDia of totaisDia'> 
+      <td class="tb_nome">GAP META</td>
+      <td class="tb_num">{{ totalDia.QTD_GAP_META_DIA | number : '1.0-2' }}</td>
+    </tr>
+
+  </table>
+</div>

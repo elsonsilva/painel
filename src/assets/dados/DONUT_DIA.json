@@ -1,0 +1,16 @@
+[{
+    "DATA": "2017-07-20",
+    "NU_TRANSACAO": 24151,
+    "Descricao_transacao": "Loterias - Registra Aposta - Mega-Sena",
+    "kind": "AFERIDO",
+    "share": 0.6001
+},
+{
+ "DATA": "2017-07-20",
+ "NU_TRANSACAO": 24151,
+ "Descricao_transacao": "Loterias - Registra Aposta - Mega-Sena",
+ "kind": "GAP",
+ "share": 0.3999
+}]
+
+

@@ -4,20 +4,20 @@ import { DomSanitizer } from '@angular/platform-browser';
 //import * as shape from 'd3-shape';
 //import * as d3 from 'd3';
 
-import { ITotaisDia } from '../totais-dia';
+import { ITotais } from '../totais';
 import { TotaisDiaService } from '../totais-dia.service';
 
 
 @Component({
-  selector: 'app-totais',
-  templateUrl: './totais.component.html',
-  styleUrls: ['./totais.component.scss']
+  selector: 'app-totais-dia',
+  templateUrl: './totais-dia.component.html',
+  styleUrls: ['./totais-dia.component.scss']
 })
-export class TotaisComponent implements OnInit {
+export class TotaisDiaComponent implements OnInit {
 
    errorMessage: string;
 
-   totaisDia: ITotaisDia[] = [];
+   totaisDia: ITotais[] = [];
 
     constructor(sanitizer: DomSanitizer, private _totaisDiaService: TotaisDiaService) {
     // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
