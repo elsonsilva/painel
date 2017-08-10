@@ -1,5 +1,6 @@
 export interface ITotais {
   DATA: Date;
+  HORA: number;
   NU_TRANSACAO: number;
   Descricao_transacao: string;
   QTD_META_DIA: number;

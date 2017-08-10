@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
+
+import { IAcumulado } from './../acumulado';
+import { ITotais} from '../totais';
+import { AcumuladoService } from './../acumulado.service';
+import { TotaisDiaService } from './../totais-dia.service';
 
 @Component({
   selector: 'app-acumulado',
@@ -7,9 +12,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcumuladoComponent implements OnInit {
 
-  constructor() { }
+  acumulados: IAcumulado[] = [];
 
-  ngOnInit() {
+  totaisDia: ITotais[] = [];
+  
+  errorMessage: string;
+
+  constructor(private _acumuladoService: AcumuladoService, private _totaisDiaService: TotaisDiaService) {
+    // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
+  }
+
+  ngOnInit(): void {
+    this._acumuladoService.getAcumulados()
+      .subscribe(acumulados => {
+        this.acumulados = acumulados;
+      },
+      error => this.errorMessage = <any>error);
+  }
+
+    ngAfterContentInit(): void {
+    this._totaisDiaService.getTotais()
+      .subscribe(totaisDia => {
+        this.totaisDia = totaisDia;
+      },
+      error => this.errorMessage = <any>error);
   }
 
 }

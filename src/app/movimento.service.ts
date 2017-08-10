@@ -16,7 +16,7 @@ export class MovimentoService {
 
     constructor(private _http: Http) { }
 
-    getProducts(): Observable<IMovimento[]> {
+    getMovimentos(): Observable<IMovimento[]> {
         return this._http.get(this._movimentoUrl)
             .map((response: Response) => <IMovimento[]> response.json())
             .do(data => console.log('MOVIMENTO: ' +  JSON.stringify(data)))

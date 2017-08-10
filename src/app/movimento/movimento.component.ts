@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { IMovimento } from './../movimento';
+import { MovimentoService } from './../movimento.service';
+
 @Component({
   selector: 'app-movimento',
   templateUrl: './movimento.component.html',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovimentoComponent implements OnInit {
 
-  constructor() { }
+  movimentos: IMovimento[] = [];
+  
+  errorMessage: string;
 
-  ngOnInit() {
+  constructor(private _movimentoService: MovimentoService) {
+    // To avoid XSS attacks, the URL needs to be trusted from inside of your application.
+  }
+
+  ngOnInit(): void {
+    this._movimentoService.getMovimentos()
+      .subscribe(movimentos => {
+        this.movimentos = movimentos;
+      },
+      error => this.errorMessage = <any>error);
   }
 
 }
