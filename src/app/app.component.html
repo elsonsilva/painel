@@ -32,33 +32,8 @@
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
       <md-card fxFlex="80">
         <md-card-title align="center">Movimento Dia</md-card-title>
-<<<<<<< HEAD
         
         <app-movimento></app-movimento>
-=======
-        <kendo-chart style="height: 290px;">
-          <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
-          <kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
-          <kendo-chart-value-axis>
-            <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
-            </kendo-chart-value-axis-item>
-          </kendo-chart-value-axis>
-          <kendo-chart-category-axis>
-            <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
-            </kendo-chart-category-axis-item>
-          </kendo-chart-category-axis>
-          <kendo-chart-series>
-            <kendo-chart-series-item name="Histórico" type="line" style="smooth" width="5" [data]="products" field="QTD_HIST" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
-            </kendo-chart-series-item>
-            <kendo-chart-series-item name="Aferido" type="line" style="smooth" width="5" [data]="products" field="QTD_AFER" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0}"></kendo-chart-series-item-labels>
-            </kendo-chart-series-item>
-
-          </kendo-chart-series>
-
-        </kendo-chart>
->>>>>>> 72364d63624116349de31c66e834d0f516a3f237
 
       </md-card>
       <md-card fxFlex="20" fxLayout="column">
@@ -79,35 +54,7 @@
       <md-card fxFlex="75">
         <md-card-title align="center">Acumulado Dia</md-card-title>
 
-<<<<<<< HEAD
         <app-acumulado></app-acumulado>
-=======
-        <kendo-chart style="height: 290px;">
-          <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
-          <kendo-chart-value-axis>
-            <kendo-chart-value-axis-item [title]="{ text: 'Quantidade' }">
-            </kendo-chart-value-axis-item>
-          </kendo-chart-value-axis>
-
-          <kendo-chart-category-axis>
-            <kendo-chart-category-axis-item [title]="{ text: 'Horas' }">
-            </kendo-chart-category-axis-item>
-          </kendo-chart-category-axis>
-
-          <kendo-chart-series>
-            <kendo-chart-series-item name="Histórico Acumulado" type="line" [data]="products" field="QTD_HIST_ACUM" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0:n}" ></kendo-chart-series-item-labels>
-            </kendo-chart-series-item>
-            <kendo-chart-series-item name="Aferido Acumulado" type="area" [data]="products" field="QTD_AFER_ACUM" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0:n}" position="center"></kendo-chart-series-item-labels>
-            </kendo-chart-series-item>
-            <kendo-chart-series-item name="Meta" type="line" [data]="products" field="META_DIA" categoryField="HORA">
-              <kendo-chart-series-item-labels visible="true" format="{0:n}" ></kendo-chart-series-item-labels>
-            </kendo-chart-series-item>
-          </kendo-chart-series>
-
-        </kendo-chart>
->>>>>>> 72364d63624116349de31c66e834d0f516a3f237
 
       </md-card>
     </div>
