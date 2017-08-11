@@ -1,21 +1,21 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 
-import { IAcumulado } from './../acumulado';
-import { ITotais} from '../totais';
-import { AcumuladoService } from './../acumulado.service';
-import { TotaisDiaService } from './../totais-dia.service';
+import { IAcumulado } from './acumulado';
+import { ITotais} from './../totais/totais';
+import { AcumuladoService} from './acumulado.service';
+import { TotaisDiaService } from './../totais/totais-dia.service';
 
 @Component({
   selector: 'app-acumulado',
   templateUrl: './acumulado.component.html',
   styleUrls: ['./acumulado.component.scss']
 })
-export class AcumuladoComponent implements OnInit {
+export class AcumuladoComponent implements OnInit, AfterContentInit {
 
   acumulados: IAcumulado[] = [];
 
   totaisDia: ITotais[] = [];
-  
+
   errorMessage: string;
 
   constructor(private _acumuladoService: AcumuladoService, private _totaisDiaService: TotaisDiaService) {

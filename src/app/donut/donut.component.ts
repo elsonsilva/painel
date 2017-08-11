@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-//import * as shape from 'd3-shape';
-//import * as d3 from 'd3';
-
-import { IDonut} from '../donut';
-import { DonutService } from '../donut.service';
+import { IDonut} from './donut';
+import { DonutService } from './donut.service';
 import { DonutCenterComponent } from './donut-center.component';
 
 

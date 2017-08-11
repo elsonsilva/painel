@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-//import * as shape from 'd3-shape';
-//import * as d3 from 'd3';
-
-import { ITotais } from '../totais';
-import { TotaisDiaService } from '../totais-dia.service';
-
+import { ITotais } from './totais';
+import { TotaisDiaService } from './totais-dia.service';
 
 @Component({
   selector: 'app-totais-dia',
