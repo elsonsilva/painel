@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { Observable } from 'rxjs/Observable';
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/Rx';
+import 'rxjs/add/operator/retry';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
+import { IntervalObservable } from "rxjs/observable/IntervalObservable";
 
 import { ITotais } from './totais';
 
@@ -15,9 +18,13 @@ export class TotaisDiaService {
     private _totaisUrl = 'assets/dados/TOTAIS_DIA.json';
 
     constructor(private _http: Http) { }
+    
 
     getTotais(): Observable<ITotais[]> {
+
         return this._http.get(this._totaisUrl)
+            // .interval(60000)
+            .retry(3)
             .map((response: Response) => <ITotais[]> response.json())
             .do(data => console.log('TOTAIS: ' +  JSON.stringify(data)))
             .catch(this.handleError);

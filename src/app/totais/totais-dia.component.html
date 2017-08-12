@@ -6,7 +6,7 @@
       <td class="tb_num">{{ totalDia.QTD_META_DIA | number : '1.0-2' }}</td>
     </tr>
     <tr *ngFor='let totalDia of totaisDia'> 
-      <td class="tb_nome">HISTORICO</td>
+      <td class="tb_nome"><span mdTooltip="Média dos últimos 3 dias úteis correspondentes">HISTORICO</span></td>
     <!-- <tr *ngFor='let total of totais'>  -->
       <td class="tb_num">{{ totalDia.QTD_HIST_ACUM_DIA | number : '1.0-2' }}</td>
     </tr>
@@ -15,11 +15,11 @@
       <td class="tb_num">{{ totalDia.QTD_AFER_ACUM_DIA | number : '1.0-2' }}</td>
     </tr>
     <tr *ngFor='let totalDia of totaisDia'> 
-      <td class="tb_nome">GAP HISTÓRICO</td>
+      <td class="tb_nome"><span mdTooltip="Diferença entre o HISTÓRICO e o AFERIDO">GAP HISTÓRICO</span></td>
       <td class="tb_num">{{ totalDia.QTD_GAP_HIST_DIA | number : '1.0-2' }}</td>
     </tr>
     <tr *ngFor='let totalDia of totaisDia'> 
-      <td class="tb_nome">GAP META</td>
+      <td class="tb_nome"><span mdTooltip="Diferença entre a META e o AFERIDO">GAP META</span></td>
       <td class="tb_num">{{ totalDia.QTD_GAP_META_DIA | number : '1.0-2' }}</td>
     </tr>
 

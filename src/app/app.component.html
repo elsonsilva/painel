@@ -26,8 +26,14 @@
       </md-nav-list>
     </md-sidenav>
 
-    <md-toolbar class="subtitulo" color="accent">Loterias - Mega-Sena
-    </md-toolbar>
+    <md-grid-list class="subtitulo" cols="1" rowHeight="40px">
+      <md-grid-tile>
+          Loterias - Mega-Sena
+      </md-grid-tile>
+    </md-grid-list>
+    <!-- <button md-button class="subtitulo" color="accent">Loterias - Mega-Sena</button> -->
+    <!-- <md-toolbar class="subtitulo" color="accent">Loterias - Mega-Sena
+    </md-toolbar> -->
 
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
       <md-card fxFlex="80">
@@ -37,7 +43,7 @@
 
       </md-card>
       <md-card fxFlex="20" fxLayout="column">
-        <md-card-title align="center">Totais Dia</md-card-title>
+        <md-card-title align="center"><span mdTooltip="Acumulados desde o início do dia">Totais Dia</span></md-card-title>
 
         <app-totais-dia></app-totais-dia>
 

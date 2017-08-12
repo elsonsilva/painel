@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { MdIconRegistry, MdDialog } from '@angular/material';
+import { MdIconRegistry, MdDialog, MdButtonModule, MdGridListModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 // import * as shape from 'd3-shape';

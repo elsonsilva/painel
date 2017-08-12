@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 
 // ANGULAR MATERIAL
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from '@angular/material';
+import {MaterialModule, MdButtonModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 // COMPONENTES
