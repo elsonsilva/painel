@@ -1,9 +1,6 @@
 [{
   "QTD_HIST": 1066,
   "QTD_AFER": 862,
-  "QTD_HIST_ACUM": 1066,
-  "QTD_AFER_ACUM": 862,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "08",
   "NU_TRANSACAO": 24151,
@@ -11,9 +8,6 @@
 }, {
   "QTD_HIST": 1623,
   "QTD_AFER": 1443,
-  "QTD_HIST_ACUM": 2689,
-  "QTD_AFER_ACUM": 2305,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "09",
   "NU_TRANSACAO": 24151,
@@ -21,9 +15,6 @@
 }, {
   "QTD_HIST": 1566,
   "QTD_AFER": 1375,
-  "QTD_HIST_ACUM": 4255,
-  "QTD_AFER_ACUM": 3680,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "10",
   "NU_TRANSACAO": 24151,
@@ -31,9 +22,6 @@
 }, {
   "QTD_HIST": 1406,
   "QTD_AFER": 1201,
-  "QTD_HIST_ACUM": 5661,
-  "QTD_AFER_ACUM": 4881,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "11",
   "NU_TRANSACAO": 24151,
@@ -41,9 +29,6 @@
 }, {
   "QTD_HIST": 1266,
   "QTD_AFER": 1006,
-  "QTD_HIST_ACUM": 6927,
-  "QTD_AFER_ACUM": 5887,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "12",
   "NU_TRANSACAO": 24151,
@@ -51,9 +36,6 @@
 }, {
   "QTD_HIST": 1281,
   "QTD_AFER": 1047,
-  "QTD_HIST_ACUM": 8208,
-  "QTD_AFER_ACUM": 6934,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "13",
   "NU_TRANSACAO": 24151,
@@ -61,9 +43,6 @@
 }, {
   "QTD_HIST": 1440,
   "QTD_AFER": 1132,
-  "QTD_HIST_ACUM": 9648,
-  "QTD_AFER_ACUM": 8066,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "14",
   "NU_TRANSACAO": 24151,
@@ -71,9 +50,6 @@
 }, {
   "QTD_HIST": 1468,
   "QTD_AFER": 1070,
-  "QTD_HIST_ACUM": 11116,
-  "QTD_AFER_ACUM": 9136,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "15",
   "NU_TRANSACAO": 24151,
@@ -81,9 +57,6 @@
 }, {
   "QTD_HIST": 910,
   "QTD_AFER": 610,
-  "QTD_HIST_ACUM": 12026,
-  "QTD_AFER_ACUM": 9746,
-  "DIA_UTIL": 14,
   "DATA": "2017-07-20",
   "HORA": "16",
   "NU_TRANSACAO": 24151,

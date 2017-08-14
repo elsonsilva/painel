@@ -23,7 +23,6 @@ export class TotaisDiaService {
     getTotais(): Observable<ITotais[]> {
 
         return this._http.get(this._totaisUrl)
-            // .interval(60000)
             .retry(3)
             .map((response: Response) => <ITotais[]> response.json())
             .do(data => console.log('TOTAIS: ' +  JSON.stringify(data)))

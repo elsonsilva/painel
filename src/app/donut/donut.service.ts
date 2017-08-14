@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { Observable } from 'rxjs/Observable';
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/Rx';
+import 'rxjs/add/operator/retry';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
+import { IntervalObservable } from "rxjs/observable/IntervalObservable";
 
 import { IDonut } from './donut';
 
@@ -18,6 +21,7 @@ export class DonutService {
 
     getDonut(): Observable<IDonut[]> {
         return this._http.get(this._donutUrl)
+            .retry(3)
             .map((response: Response) => <IDonut[]> response.json())
             .do(data => console.log('DONUT: ' +  JSON.stringify(data)))
             .catch(this.handleError);

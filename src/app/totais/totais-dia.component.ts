@@ -29,14 +29,6 @@ export class TotaisDiaComponent implements OnInit {
     this.alive = true;
   }
 
-  // ngOnInit(): void {
-    
-  //   this._totaisDiaService.getTotais()
-  //     .subscribe(totaisDia => {
-  //       this.totaisDia = totaisDia;
-  //     },
-  //     error => this.errorMessage = <any>error);
-  // }
 
   ngOnInit(): void {
     // get our data immediately when the component inits
@@ -49,7 +41,7 @@ export class TotaisDiaComponent implements OnInit {
 
     // get our data every subsequent 10 seconds
     // https://stackoverflow.com/questions/35316583/angular2-http-at-an-interval
-    IntervalObservable.create(5000)
+    IntervalObservable.create(30000)
       .takeWhile(() => this.alive) // only fires when component is alive
       .subscribe(() => {
         this._totaisDiaService.getTotais()
