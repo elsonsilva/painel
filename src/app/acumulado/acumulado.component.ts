@@ -1,9 +1,10 @@
-import { Component, OnInit, AfterContentInit } from '@angular/core';
+// import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from "rxjs";
 import { IntervalObservable } from "rxjs/observable/IntervalObservable";
 
 import { IAcumulado } from './acumulado';
-import { ITotais} from './../totais/totais';
+// import { ITotais} from './../totais/totais';
 import { AcumuladoService} from './acumulado.service';
 import { TotaisDiaService } from './../totais/totais-dia.service';
 
@@ -12,12 +13,12 @@ import { TotaisDiaService } from './../totais/totais-dia.service';
   templateUrl: './acumulado.component.html',
   styleUrls: ['./acumulado.component.scss']
 })
- export class AcumuladoComponent implements OnInit, AfterContentInit {
-
+ // export class AcumuladoComponent implements OnInit, AfterContentInit {
+  export class AcumuladoComponent implements OnInit {
 
   acumulados: IAcumulado[] = [];
 
-  totaisDia: ITotais[] = [];
+  // totaisDia: ITotais[] = [];
 
   errorMessage: string;
   private display: boolean; // whether to display info in the component
@@ -58,12 +59,12 @@ private alive: boolean; // used to unsubscribe from the IntervalObservable
     this.alive = false; // switches your IntervalObservable off
   }
 
-    ngAfterContentInit(): void {
-    this._totaisDiaService.getTotais()
-      .subscribe(totaisDia => {
-        this.totaisDia = totaisDia;
-      },
-      error => this.errorMessage = <any>error);
-  }
+  //   ngAfterContentInit(): void {
+  //   this._totaisDiaService.getTotais()
+  //     .subscribe(totaisDia => {
+  //       this.totaisDia = totaisDia;
+  //     },
+  //     error => this.errorMessage = <any>error);
+  // }
 
 }
