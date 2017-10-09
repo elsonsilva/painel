@@ -1,0 +1,14 @@
+<md-grid-list class="subtitulo" cols="1" rowHeight="40px">
+  <md-grid-tile>
+    Loterias - Mega-Sena
+    <table *ngIf='subtitulos && subtitulos.length'>
+      <tr *ngFor='let subtitulos of subtitulos'> 
+        <td class="tb_nome">{{ subtitulos.SITUACAO  }}</td>
+        <!-- <td class="tb_num">{{ total.QTD_META_DIA | number : '1.2-2' }}</td>  {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} -->
+      </tr>
+    </table>
+  </md-grid-tile>
+</md-grid-list>
+
+<!-- <p> LOTERIAS </p> -->
+

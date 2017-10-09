@@ -17,6 +17,8 @@ import { DonutCenterComponent } from './donut/donut-center.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { MovimentoComponent } from './movimento/movimento.component';
 import { AcumuladoComponent } from './acumulado/acumulado.component';
+import { SubtituloComponent } from './subtitulo/subtitulo.component';
+import { VistoComponent } from './visto/visto.component';
 
 // SERVICOS
 import { TotaisDiaService} from './totais/totais-dia.service';
@@ -24,6 +26,8 @@ import { DonutService } from './donut/donut.service';
 import { DonutCenterService } from './donut/donut-center.service';
 import { MovimentoService } from './movimento/movimento.service';
 import { AcumuladoService } from './acumulado/acumulado.service';
+import { SubtituloService } from './subtitulo/subtitulo.service';
+import { VistoService } from './visto/visto.service';
 
 // KENDO UI
 import {ChartsModule} from '@progress/kendo-angular-charts';
@@ -34,6 +38,8 @@ import {ButtonsModule} from '@progress/kendo-angular-buttons';
 import 'hammerjs';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +48,9 @@ import 'hammerjs';
     DonutComponent,
     DonutCenterComponent,
     MovimentoComponent,
-    AcumuladoComponent
+    AcumuladoComponent,
+    SubtituloComponent,
+    VistoComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +72,9 @@ import 'hammerjs';
   DonutService,
   DonutCenterService,
   MovimentoService,
-  AcumuladoService
+  AcumuladoService,
+  SubtituloService,
+  VistoService
   ],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]

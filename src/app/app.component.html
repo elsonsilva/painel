@@ -26,14 +26,7 @@
       </md-nav-list>
     </md-sidenav>
 
-    <md-grid-list class="subtitulo" cols="1" rowHeight="40px">
-      <md-grid-tile>
-          Loterias - Mega-Sena
-      </md-grid-tile>
-    </md-grid-list>
-    <!-- <button md-button class="subtitulo" color="accent">Loterias - Mega-Sena</button> -->
-    <!-- <md-toolbar class="subtitulo" color="accent">Loterias - Mega-Sena
-    </md-toolbar> -->
+        <app-subtitulo></app-subtitulo>
 
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
       <md-card fxFlex="80">
@@ -63,6 +56,16 @@
         <app-acumulado></app-acumulado>
 
       </md-card>
+    </div>
+
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="8px">
+      <md-card fxFlex>
+        <md-card-title align="center">Visto CAIXA</md-card-title>
+
+        <app-visto></app-visto>
+
+      </md-card>
+
     </div>
   </md-sidenav-container>
 
