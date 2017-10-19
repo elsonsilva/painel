@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
@@ -30,15 +30,19 @@ import { SubtituloService } from './subtitulo/subtitulo.service';
 import { VistoService } from './visto/visto.service';
 
 // KENDO UI
+import { IntlModule } from '@progress/kendo-angular-intl';
 import {ChartsModule} from '@progress/kendo-angular-charts';
 import {ButtonsModule} from '@progress/kendo-angular-buttons';
+
+// Load all required data for the bg locale
+import '@progress/kendo-angular-intl/locales/pt/all';
+
+// Load the required calendar data for the de locale
+import '@progress/kendo-angular-intl/locales/pt/calendar';
 
 // import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 import 'hammerjs';
-
-
-
 
 @NgModule({
   declarations: [
@@ -60,7 +64,8 @@ import 'hammerjs';
     FlexLayoutModule,
     BrowserAnimationsModule,
     ButtonsModule,
-    ChartsModule
+    ChartsModule,
+    IntlModule
     // RouterModule.forRoot([
     //   { path: 'monitor', component: AppComponent },
     //   { path: '', redirectTo: 'monitor', pathMatch: 'full' },
@@ -74,7 +79,8 @@ import 'hammerjs';
   MovimentoService,
   AcumuladoService,
   SubtituloService,
-  VistoService
+  VistoService,
+  {provide: LOCALE_ID, useValue: 'pt'}
   ],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]

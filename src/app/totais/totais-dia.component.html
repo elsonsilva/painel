@@ -6,12 +6,12 @@
       <td class="tb_num">{{ totalDia.QTD_META_DIA | number : '1.0-2' }}</td>
     </tr>
     <tr *ngFor='let totalDia of totaisDia'> 
-      <td class="tb_nome"><span mdTooltip="Média dos últimos 3 dias úteis correspondentes">HISTORICO</span></td>
+      <td class="tb_nome"><span mdTooltip="Média dos últimos 3 dias úteis correspondentes">HISTÓRICO ACUMULADO</span></td>
     <!-- <tr *ngFor='let total of totais'>  -->
       <td class="tb_num">{{ totalDia.QTD_HIST_ACUM_DIA | number : '1.0-2' }}</td>
     </tr>
     <tr *ngFor='let totalDia of totaisDia'> 
-      <td class="tb_nome">AFERIDO</td>
+      <td class="tb_nome">AFERIDO ACUMULADO</td>
       <td class="tb_num">{{ totalDia.QTD_AFER_ACUM_DIA | number : '1.0-2' }}</td>
     </tr>
     <tr *ngFor='let totalDia of totaisDia'> 

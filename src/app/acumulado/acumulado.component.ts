@@ -10,8 +10,7 @@ import { TotaisDiaService } from './../totais/totais-dia.service';
 
 @Component({
   selector: 'app-acumulado',
-  templateUrl: './acumulado.component.html',
-  styleUrls: ['./acumulado.component.scss']
+  templateUrl: './acumulado.component.html'
 })
  // export class AcumuladoComponent implements OnInit, AfterContentInit {
   export class AcumuladoComponent implements OnInit {
